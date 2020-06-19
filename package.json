@@ -1,0 +1,22 @@
+{
+  "name": "coursedog_recruitment_task",
+  "version": "1.0.0",
+  "description": "QA Recruitment Task",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LukasLewandowski/coursedog_recruitment_task.git"
+  },
+  "author": "Lukas Lewandowski",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LukasLewandowski/coursedog_recruitment_task/issues"
+  },
+  "homepage": "https://github.com/LukasLewandowski/coursedog_recruitment_task#readme",
+  "dependencies": {
+    "cypress": "^4.8.0"
+  }
+}
