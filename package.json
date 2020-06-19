@@ -4,7 +4,8 @@
   "description": "QA Recruitment Task",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "cypress": "npx cypress open",
+    "test": "npx cypress run"
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,12 @@
   },
   "homepage": "https://github.com/LukasLewandowski/coursedog_recruitment_task#readme",
   "dependencies": {
-    "cypress": "^4.8.0"
+    "cypress": "^4.8.0",
+    "cypress-cucumber-preprocessor": "^2.5.0",
+    "cypress-plugin-retries": "^1.5.2"
+  },
+  "devDependencies": {
+    "eslint": "^7.3.0",
+    "husky": "^4.2.5"
   }
 }
