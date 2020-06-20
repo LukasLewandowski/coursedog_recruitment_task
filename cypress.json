@@ -1,7 +1,15 @@
 {
-    "integrationFolder": "cypress/features",
-    "video": false,
     "baseUrl": "https://damian-events.coursedog.com/",
+    "integrationFolder": "cypress/features",
+    "video": true,
     "screenshotsFolder": "results/cypress-assets/screenshots",
-    "videosFolder": "results/cypress-assets/videos"
+    "videosFolder": "results/cypress-assets/videos",
+    "viewportWidth": 1920,
+    "viewportHeight": 1080,
+    "pageLoadTimeout": 60000,
+    "execTimeout": 60000,
+    "defaultCommandTimeout": 60000,
+    "requestTimeout": 60000,
+    "responseTimeout": 60000,
+    "taskTimeout": 60000
 }
