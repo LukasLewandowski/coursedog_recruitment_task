@@ -1,1 +1,7 @@
-{}
+{
+  "integrationFolder": "cypress/features",
+  "video": false,
+  "baseUrl": "https://damian-events.coursedog.com/",
+  "screenshotsFolder": "results/cypress-assets/screenshots",
+  "videosFolder": "results/cypress-assets/videos"
+}

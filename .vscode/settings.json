@@ -1,0 +1,9 @@
+{
+    "editor.quickSuggestions": true,
+    "cucumberautocomplete.steps": [
+        "cypress/support/step_definitions/*.js",
+        "cypress/support/step_definitions/**/*.js",
+    ],
+    "cucumberautocomplete.syncfeatures": "cypress/features/*feature",
+    "cucumberautocomplete.strictGherkinCompletion": true
+}

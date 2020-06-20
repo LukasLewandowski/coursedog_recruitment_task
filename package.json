@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "cypress": "npx cypress open",
-    "test": "npx cypress run"
+    "test": "npx cypress run",
+    "lint": "npx eslint --ext .js",
+    "lint-fix": "npm run lint -- --fix"
   },
   "repository": {
     "type": "git",
@@ -24,6 +26,15 @@
   },
   "devDependencies": {
     "eslint": "^7.3.0",
-    "husky": "^4.2.5"
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-cypress": "^2.11.1",
+    "eslint-plugin-prettier": "^3.1.4",
+    "husky": "^4.2.5",
+    "prettier": "^2.0.5"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
   }
 }
