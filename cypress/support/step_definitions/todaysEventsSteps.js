@@ -9,7 +9,10 @@ Then(/^I should see there are no events$/, () => {
     cy.get('[role=listitem]').should('not.exist');
 });
 
-Then(/^I should see all events happening today$/, () => {
+Then(/^I should see all events happening today, including:$/, (eventsDataTable) => {
+    eventsDataTable = eventsDataTable.raw();
     cy.get(cardContent).should('be.visible');
-    cy.get(cardContent).contains('QA Recruitment Task Start').should('be.visible');
+    eventsDataTable.forEach((event) => {
+        cy.get(cardContent).contains(event.toString()).should('be.visible');
+    });
 });
