@@ -15,3 +15,9 @@ When(/^I click on Today's Events$/, () => {
     // expect(cy.get('#main-content > section > h1').should('include.text', "Today's events"));
     // expect(cy.get('#main-content > section > h1').contains('\n Today’s events:\n').should('be.visible'));
 });
+
+When(/^I click on Featured Events$/, () => {
+    cy.get('[href="/featured"]').should('be.visible').click();
+    expect(cy.url().should('equal', Cypress.config('baseUrl') + 'featured'));
+    expect(cy.get('#announcer').should('be.visible'));
+});
