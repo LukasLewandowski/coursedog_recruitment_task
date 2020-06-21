@@ -1,6 +1,7 @@
 /// <reference types="cypress" />
 
 import { When, Then } from 'cypress-cucumber-preprocessor/steps';
+import { cardContentSelector } from './eventsListSteps';
 
 const buttonsSelector = 'button.btn';
 const fieldLabelSelector = 'article div';
@@ -8,7 +9,7 @@ const fieldValueSelector = 'div.v-popover';
 const addressFieldSelector = 'article [data-icon="map-marker-alt"]';
 
 When(/^I click on the "(.+?)" event card$/, (eventName) => {
-    cy.get('div.card-content').contains(eventName).click();
+    cy.get(cardContentSelector).contains(eventName).click();
 });
 
 Then(/^I should see "(.+?)" button$/, (buttonName) => {
@@ -31,5 +32,5 @@ Then(/^I should see "(.+?)" field$/, (fieldName) => {
 
 Then(/^I can see (\d+?) other meetings that will take place as part of that event$/, (numberOfEvents) => {
     cy.contains('Upcoming meetings from this event').should('be.visible');
-    cy.get('div.card-content').should('have.length', numberOfEvents);
+    cy.get(cardContentSelector).should('have.length', numberOfEvents);
 });
