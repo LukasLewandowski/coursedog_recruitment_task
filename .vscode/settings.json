@@ -5,5 +5,8 @@
         "cypress/support/step_definitions/**/*.js",
     ],
     "cucumberautocomplete.syncfeatures": "cypress/features/*.feature",
-    "cucumberautocomplete.strictGherkinCompletion": true
+    "cucumberautocomplete.strictGherkinCompletion": true,
+    "cSpell.words": [
+        "whitespaces"
+    ]
 }
