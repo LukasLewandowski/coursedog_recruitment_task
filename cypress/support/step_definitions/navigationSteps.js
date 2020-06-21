@@ -2,10 +2,10 @@
 
 import { Given, When } from 'cypress-cucumber-preprocessor/steps';
 
-export const announcerSelector = '#announcer';
-export const todaysEventsSelector = 'nav a[href="/today"]';
-export const featuredEventsSelector = 'nav a[href="/featured"]';
-export const pageHeaderSelector = '#main-content > section > h1 > span';
+const announcerSelector = '#announcer';
+const todaysEventsSelector = 'nav a[href="/today"]';
+const featuredEventsSelector = 'nav a[href="/featured"]';
+const pageHeaderSelector = '#main-content > section > h1 > span';
 
 Given(/^I navigate to CourseDog page$/, () => {
     cy.visit(Cypress.config('baseUrl'));
