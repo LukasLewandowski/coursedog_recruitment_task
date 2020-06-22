@@ -3,8 +3,8 @@
 import { Given, When } from 'cypress-cucumber-preprocessor/steps';
 
 Given(/^Current date is "(.+?)"$/, (selectedDate) => {
-    const customDate = new Date(selectedDate).getTime();
-    cy.clock(customDate);
+    const now = new Date(selectedDate).getTime();
+    cy.clock(now, ['Date']);
 });
 
 When(/^I select a specific date "(.+?)" from the calendar$/, (selectedDate) => {
@@ -13,4 +13,5 @@ When(/^I select a specific date "(.+?)" from the calendar$/, (selectedDate) => {
     cy.get('[aria-label="' + customDateFormatted + '"]').click();
     /* replace all whitespaces and replace "," with "/" */
     expect(cy.url().should('equal', Cypress.config('baseUrl') + selectedDate.replace(/\s/g, '').replace(/,/g, '/')));
+    expect(cy.get('section > h1').should('include.text', customDate.format('dddd, MMMM DD, YYYY')));
 });

@@ -4,7 +4,7 @@ import { When, Then } from 'cypress-cucumber-preprocessor/steps';
 
 const createEventDropdownSelector = '#requestEventTypeSelect';
 const headerSelector = '.container h1';
-const loadingSelector = 'div.loading';
+export const loadingSelector = 'div.loading';
 const wholeFormSelector = '.container > div > div > form';
 const buttonSelector = 'button.btn-primary';
 const eventNameSelector = 'input[placeholder="Set Event Name"]';

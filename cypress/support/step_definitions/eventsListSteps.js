@@ -1,6 +1,8 @@
 /// <reference types="cypress" />
 
 import { Then } from 'cypress-cucumber-preprocessor/steps';
+import { announcerSelector } from './navigationSteps';
+import { loadingSelector } from './createEventSteps';
 
 export const cardContentSelector = 'div.card-content';
 const cardTitle = cardContentSelector + ' > a[aria-label]';
@@ -11,6 +13,9 @@ Then(/^I should see there are no events$/, () => {
 });
 
 Then(/^I should see event?s?:$/, (dataTable) => {
+    expect(cy.get(cardContentSelector).should('be.visible'));
+    expect(cy.get(announcerSelector).should('be.visible'));
+    expect(cy.get(loadingSelector).should('not.be.visible'));
     dataTable = dataTable.rawTable;
     const expectedEventsTitles = [].concat(...dataTable);
     cy.get(cardTitle)
