@@ -15,3 +15,7 @@
 ### execute eslint
 
 `npm run lint`
+
+#### To Do:
+
+-   add generating Html report from the tests
